@@ -1,0 +1,44 @@
+
+html{
+   box-sizing: border-box;
+   -ms-overflow-style: scrollbar;
+   width: 100%;
+   font-size: 100%;
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+   &:before, &:after{
+      box-sizing: inherit;
+   }
+}
+
+body{
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;  
+  margin: 0 auto;
+  overflow-x: hidden;
+  // font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &_noscroll{
+     overflow: hidden;
+  }
+}
+
+main{
+  overflow-x: hidden;
+}
+
+.lazyload, .lazyloading{
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 0.3s linear;
+}
