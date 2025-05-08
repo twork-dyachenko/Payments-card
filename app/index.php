@@ -28,7 +28,7 @@
 									class="payment-form__input" 
 									name="expiry" 
 									id="expiry" 
-									placeholder="YY / MM" 
+									placeholder="MM / YY" 
 									required 
 									pattern="\d{2}\/\d{2}" 
 									oninput="formatExpiry(this)" 

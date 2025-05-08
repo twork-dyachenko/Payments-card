@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const amountInput = form.querySelector('[name="amount"]');
     const expiryInput = form.querySelector('[name="expiry"]');
     const submitButton = form.querySelector(".payment-form__submit");
+    document.querySelector('[name="cvv"]').setAttribute('type', 'password');
 
     let amountTouched = false;
 
@@ -53,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         value = value.replace(/^(\d{2})\s*\/\s*(\d{2})$/, '$1 / $2');
         const match = value.match(/^(\d{2}) \/ (\d{2})$/);
         if (!match) return false;
-        const [_, year, month] = match.map(Number);
+        const [_, month, year] = match.map(Number);
         if (month < 1 || month > 12) return false;
         const currentDate = new Date();
         const inputDate = new Date(2000 + year, month - 1);
@@ -65,8 +66,45 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function isValidKZPhone(phone) {
-        return /^\+77\d{9}$/.test(phone);
+        const digits = phone.replace(/\D/g, '');
+        return /^77\d{9}$/.test(digits);
     }
+
+    const senderPhoneInput = document.querySelector('[name="senderPhone"]');
+    // Маска ввода номера телефона KZ
+    senderPhoneInput.addEventListener('focus', (e) => {
+        if (!e.target.value.startsWith('+7 (7')) {
+            e.target.value = '+7 (7';
+        }
+    });
+    senderPhoneInput.addEventListener('input', (e) => {
+        const input = e.target;
+        let digits = input.value.replace(/\D/g, '');
+
+        if (!digits.startsWith('77')) {
+            digits = '77';
+        }
+
+        digits = digits.slice(0, 11);
+
+        const parts = [
+            digits.slice(0, 1),   // 7
+            digits.slice(1, 4),   // 7XX
+            digits.slice(4, 7),   // XXX
+            digits.slice(7, 9),   // XX
+            digits.slice(9, 11),  // XX
+        ];
+
+        let formatted = '+7';
+
+        if (parts[1]) formatted += ` (${parts[1]}`;
+        if (parts[2]) formatted += `) ${parts[2]}`;
+        if (parts[3]) formatted += `-${parts[3]}`;
+        if (parts[4]) formatted += `-${parts[4]}`;
+
+        input.value = formatted;
+    });
+
 
     window.formatExpiry = (input) => {
         let raw = input.value.replace(/[^\d]/g, '');
@@ -87,16 +125,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const value = input.value.trim();
         let valid = true;
         const errorSpan = document.getElementById(`${name}-error`);
-    
+
         if (errorSpan) errorSpan.classList.add("payment-form__hidden");
-    
+
         switch (name) {
             case "senderCard": {
                 const digitsOnly = value.replace(/\s/g, '');
                 valid = /^\d{16}$/.test(digitsOnly) && isValidLuhn(digitsOnly);
                 break;
             }
-            
+
             case "cvv":
                 valid = /^\d{3}$/.test(value);
                 break;
@@ -110,12 +148,12 @@ document.addEventListener("DOMContentLoaded", () => {
             case "senderPhone":
                 valid = isValidKZPhone(value);
                 break;
-                case "recipientCard": {
-                    const digitsOnly = value.replace(/\s/g, '');
-                    valid = /^\d{16}$/.test(digitsOnly) && isValidLuhn(digitsOnly);
-                    break;
-                }
-                
+            case "recipientCard": {
+                const digitsOnly = value.replace(/\s/g, '');
+                valid = /^\d{16}$/.test(digitsOnly) && isValidLuhn(digitsOnly);
+                break;
+            }
+
             case "amount":
                 const num = parseFloat(value.replace(',', '.').replace(/\s/g, ''));
                 if (!amountTouched) {
@@ -125,19 +163,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 valid = !isNaN(num) && num >= 150 && num <= 500000;
                 break;
         }
-    
+
         toggleError(input, !valid);
         toggleValid(input, valid);
-    
+
         if (!valid && errorSpan) {
             errorSpan.classList.remove("payment-form__hidden");
         } else if (valid && errorSpan) {
             errorSpan.classList.add("payment-form__hidden");
         }
-    
+
         return valid;
     }
-    
+
 
     function calculateCommission(amount) {
         const commission = +(amount * 0.01).toFixed(2);
