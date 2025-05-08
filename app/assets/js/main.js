@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const inputs = form.querySelectorAll(".payment-form__input");
     const amountInput = form.querySelector('[name="amount"]');
     const expiryInput = form.querySelector('[name="expiry"]');
+    const submitButton = form.querySelector(".payment-form__submit");
+
     let amountTouched = false;
 
     // Helper: add/remove error class
@@ -72,7 +74,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const name = input.name;
         const value = input.value.trim();
         let valid = true;
-
+        const errorSpan = document.getElementById(`${name}-error`);
+    
+        if (errorSpan) errorSpan.classList.add("payment-form__hidden");
+    
         switch (name) {
             case "senderCard":
                 valid = /^\d{16}$/.test(value) && isValidLuhn(value);
@@ -99,14 +104,22 @@ document.addEventListener("DOMContentLoaded", () => {
                     valid = true;
                     break;
                 }
-                valid = !isNaN(num) && num >= 5 && num <= 4990;
+                valid = !isNaN(num) && num >= 150 && num <= 500000;
                 break;
         }
-
+    
         toggleError(input, !valid);
         toggleValid(input, valid);
+    
+        if (!valid && errorSpan) {
+            errorSpan.classList.remove("payment-form__hidden");
+        } else if (valid && errorSpan) {
+            errorSpan.classList.add("payment-form__hidden");
+        }
+    
         return valid;
     }
+    
 
     function calculateCommission(amount) {
         const commission = +(amount * 0.01).toFixed(2);
@@ -139,11 +152,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Обробники подій для всіх інпутів
     inputs.forEach((input) => {
-        input.addEventListener("blur", () => validateInput(input));
-        input.addEventListener("input", () => validateInput(input));
+        let touched = false;
+
+        input.addEventListener("input", () => {
+            const value = input.value.trim();
+            const wasInvalid = input.classList.contains("payment-form__input--error");
+
+            if (wasInvalid) {
+                const valid = validateInput(input);
+                if (valid) {
+                    toggleError(input, false);
+                    toggleValid(input, true);
+                }
+            }
+
+            touched = true;
+        });
+
+        input.addEventListener("blur", () => {
+            if (touched || input.value.trim() !== '') {
+                validateInput(input);
+            }
+        });
     });
 
-    // Особлива обробка поля "amount"
+    // обробка поля "amount"
     amountInput.addEventListener("input", () => {
         amountTouched = true;
         validateInput(amountInput);
@@ -153,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Форматування поля expiry при вводі
     expiryInput.addEventListener("input", (e) => {
         formatExpiry(e.target);
-        validateInput(e.target);
+        // validateInput(e.target);
     });
 
     // Початкове оновлення підсумку
@@ -176,6 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (isValid) {
+            submitButton.style.display = "inline-block";
             console.log("Форма валідна");
         }
     };

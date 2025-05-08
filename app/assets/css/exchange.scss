@@ -21,6 +21,7 @@ $base-vw: 1920px;
         max-width: 100%;
         padding-left: 16px;
         padding-right: 16px;
+        padding-bottom: 100px;
     }
     &__title {
         font-weight: 700;
@@ -155,7 +156,8 @@ $base-vw: 1920px;
             font-size: 12px;
             line-height: 140%;
             justify-content: start;
-            margin-top: 8px;
+            margin-top: 5px;
+            margin-left: 13px;
             br{
                 display: none;
             }
@@ -183,7 +185,7 @@ $base-vw: 1920px;
         &--error{
             border: 1px solid #EA4335!important;
             color: #EA4335!important;
-            border-radius: vw(12px, $base-vw)!important;
+            border-radius: vw(12px, $base-vw);
             
             &::placeholder{
                 color: #EA4335;
@@ -218,11 +220,18 @@ $base-vw: 1920px;
         &.payment-form__input--amount{
             width: 100%;
             color: #000;
-            border: none;
+            border-top: 0 !important;
+            border-right: 0 !important;
+            border-left: 0 !important;
             border-bottom: 1px solid #000;
             border-radius: 0;
             padding-left: vw(13px, $base-vw);
             background: transparent;
+            @media screen and (max-width: 1024px){
+                padding-left: 13px;
+                height: 40px;
+                padding-bottom: 10px;
+            }
             &.payment-form__error{
                 color: #EA4335;
                 &::placeholder{
@@ -242,7 +251,7 @@ $base-vw: 1920px;
             border-radius: 8px;
             font-size: 12px;
             padding-left: 36px;
-
+            padding-bottom: 0;
         }
     }
 
@@ -263,11 +272,10 @@ $base-vw: 1920px;
         @media screen and (max-width: 1024px){
             svg{
                 left: 12px;
+                transform: scale(0.85) translateY(-50%);
             }
         }
     }
-
-    
 
     &__note {
         color: #A7A7A7;
@@ -364,6 +372,10 @@ $base-vw: 1920px;
             padding: vw(29px, $base-vw) vw(12px, $base-vw) ;
             border-top: 1px solid #A1A1A1;
             border-bottom: 1px solid #A1A1A1;
+            @media screen and (max-width: 1024px){
+                padding: 29px 0;
+                gap: 12px;
+            }
         }
         p{
             font-weight: 500;
@@ -394,6 +406,24 @@ $base-vw: 1920px;
                 line-height: 20px;
             }
         }
+    }
+
+    &__msg{
+        color: #EA4335;
+        font-family: "Montserrat", sans-serif;
+        font-size: vw(14px, $base-vw);
+        position: absolute;
+        bottom: vw(-23px, $base-vw);
+        left: 0;
+        opacity: 1;
+        transition: .3s;
+        @media screen and (max-width: 1024px) {
+            font-size: 12px;
+            bottom: -20px;
+        }
+    }
+    &__hidden{
+        opacity: 0;
     }
 
     &__total{
@@ -431,12 +461,9 @@ $base-vw: 1920px;
         }
     }
     
-    .payment-form__submit.spin {
-        animation: spin 1s linear infinite;
-    }
-    
     .payment-form__submit {
-        display: inline-block;
+        display: none;
+        animation: spin 1s linear infinite;
     }
     &__pay-btn {
         font-weight: 500;
@@ -550,7 +577,7 @@ $base-vw: 1920px;
             }
             .accordion-title {
                 color: #000000;
-    font-family: "Montserrat", sans-serif!important;
+                font-family: "Montserrat", sans-serif!important;
 
             }
             .icon {
@@ -673,8 +700,20 @@ $base-vw: 1920px;
             margin-left: 12px;
             text-align: left;
             font-size: 16px;
+            margin-bottom: 20px;
         }
     }
+    .accordion button .icon{
+        @media screen and (max-width: 1024px) {
+            // width: 16px;
+            // height: 16px;
+        }
+    }
+    .accordion button[aria-expanded=true] + .accordion-content{
+        // max-height: 100%;
+        overflow-y: scroll;
+    }
+    
     .accordion-item{
         width: 100%;
         max-width: calc(50% - vw(8px, $base-vw));
@@ -683,12 +722,19 @@ $base-vw: 1920px;
             button{
                 .icon{
                     img{
-                        width: 22px;
+                        width: 18px;
                     }
                 }
             }
-            
-            
+        }
+        @media screen and (max-width: 768px){
+            button{
+                .icon{
+                    img{
+                        width: 16px;
+                    }
+                }
+            }
         }
     }
     .container{
