@@ -22,7 +22,9 @@
 		<a href="index-ru.php">RU</a>
 		<a href="index-kz.php">KZ</a>
 		<a href="index.php">ENG</a>
-		<a href="payment-status.php">Payment status</a>
+		<a href="payment-status-ru.php">Status RU</a>
+		<a href="payment-status-kz.php">Status KZ</a>
+		<a href="payment-status.php">Status ENG</a>
 	</div>
     <main>
         <section class="payment-section">
@@ -34,7 +36,7 @@
 						<div class="payment-form__row">
                         	<div class="payment-form__wrapper full-width">
 								
-								<input type="text" data-type="card-number" class=" payment-form__input" name="senderCard" placeholder="0000 0000 0000 0000" maxlength="16" required pattern="\d{16}" />
+								<input type="text" data-type="card-number" class=" payment-form__input" name="senderCard" placeholder="0000 0000 0000 0000" maxlength="19" required pattern="\d{19}" />
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 11v4.8c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874c.427.218.987.218 2.105.218h11.606c1.118 0 1.677 0 2.104-.218.377-.192.683-.498.875-.874.218-.428.218-.986.218-2.104V11M3 11V9m0 2h18M3 9v-.8c0-1.12 0-1.68.218-2.108.192-.377.497-.682.874-.874C4.52 5 5.08 5 6.2 5h11.6c1.12 0 1.68 0 2.107.218.377.192.683.497.875.874.218.427.218.987.218 2.105V9M3 9h18M7 15h4m10-4V9"/></svg>
 							</div>
                             <div class="payment-form__wrapper half-width">
@@ -85,7 +87,7 @@
                         <h3 class="payment-form__subtitle">Получатель</h3>
                         <div class="payment-form__row">
 							<div class="payment-form__wrapper full-width">
-								<input type="text" data-type="card-number" class="payment-form__input" name="recipientCard" placeholder="0000 0000 0000 0000" maxlength="16" required pattern="\d{16}" />
+								<input type="text" data-type="card-number" class="payment-form__input" name="recipientCard" placeholder="0000 0000 0000 0000" maxlength="19" required pattern="\d{19}" />
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 11v4.8c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874c.427.218.987.218 2.105.218h11.606c1.118 0 1.677 0 2.104-.218.377-.192.683-.498.875-.874.218-.428.218-.986.218-2.104V11M3 11V9m0 2h18M3 9v-.8c0-1.12 0-1.68.218-2.108.192-.377.497-.682.874-.874C4.52 5 5.08 5 6.2 5h11.6c1.12 0 1.68 0 2.107.218.377.192.683.497.875.874.218.427.218.987.218 2.105V9M3 9h18M7 15h4m10-4V9"/></svg>
 							</div>
 							<div class="payment-form__wrapper full-width">

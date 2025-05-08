@@ -32,9 +32,21 @@ document.addEventListener("DOMContentLoaded", () => {
         e.target.value = e.target.value.replace(/\D/g, ''); // Залишаємо тільки цифри
     }
 
-    // Додаємо обробники подій для полів картки
-    document.querySelector('[name="senderCard"]').addEventListener('input', restrictNonNumericInput);
-    document.querySelector('[name="recipientCard"]').addEventListener('input', restrictNonNumericInput);
+    // Форматирование номера карты XXXX XXXX XXXX XXXX
+    function formatCardNumber(input) {
+        let raw = input.value.replace(/\D/g, '').slice(0, 16); // Оставляем только 16 цифр
+        input.value = raw.replace(/(\d{4})(?=\d)/g, '$1 ').trim();
+    }
+
+    // Обмеження введення тільки цифр + форматування
+    function handleCardInput(e) {
+        formatCardNumber(e.target);
+    }
+
+    // Обновляем обработчики для полей карты
+    document.querySelector('[name="senderCard"]').addEventListener('input', handleCardInput);
+    document.querySelector('[name="recipientCard"]').addEventListener('input', handleCardInput);
+
 
     function isValidExpiry(value) {
         value = value.trim();
@@ -79,9 +91,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (errorSpan) errorSpan.classList.add("payment-form__hidden");
     
         switch (name) {
-            case "senderCard":
-                valid = /^\d{16}$/.test(value) && isValidLuhn(value);
+            case "senderCard": {
+                const digitsOnly = value.replace(/\s/g, '');
+                valid = /^\d{16}$/.test(digitsOnly) && isValidLuhn(digitsOnly);
                 break;
+            }
+            
             case "cvv":
                 valid = /^\d{3}$/.test(value);
                 break;
@@ -95,9 +110,12 @@ document.addEventListener("DOMContentLoaded", () => {
             case "senderPhone":
                 valid = isValidKZPhone(value);
                 break;
-            case "recipientCard":
-                valid = /^\d{16}$/.test(value) && isValidLuhn(value);
-                break;
+                case "recipientCard": {
+                    const digitsOnly = value.replace(/\s/g, '');
+                    valid = /^\d{16}$/.test(digitsOnly) && isValidLuhn(digitsOnly);
+                    break;
+                }
+                
             case "amount":
                 const num = parseFloat(value.replace(',', '.').replace(/\s/g, ''));
                 if (!amountTouched) {

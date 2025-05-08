@@ -15,5 +15,7 @@
 		<a href="index-ru.php">RU</a>
 		<a href="index-kz.php">KZ</a>
 		<a href="index.php">ENG</a>
-		<a href="payment-status.php">Payment status</a>
+		<a href="payment-status-ru.php">Status RU</a>
+		<a href="payment-status-kz.php">Status KZ</a>
+		<a href="payment-status.php">Status ENG</a>
 	</div>
