@@ -189,8 +189,21 @@ document.addEventListener("DOMContentLoaded", () => {
         // validateInput(e.target);
     });
 
-    // Початкове оновлення підсумку
     updateAmountSummary();
+
+
+    const translations = {
+        en: {
+            required: "is required"
+        },
+        ru: {
+            required: "обязательное"
+        },
+        kk: {
+            required: "Бұл өріс қажет"
+        }
+    };
+    const currentLang = document.documentElement.lang || 'en';
 
     // Загальна перевірка форми
     window.validateForm = (event) => {
@@ -202,8 +215,8 @@ document.addEventListener("DOMContentLoaded", () => {
             isValid = isValid && valid;
 
             if (!input.value.trim()) {
-                const basePlaceholder = input.getAttribute("data-placeholder") || input.placeholder.replace(" is required", "");
-                input.placeholder = `${basePlaceholder} is required`;
+                const basePlaceholder = input.getAttribute("data-placeholder") || input.placeholder.replace(` ${translations[currentLang].required}`, "");
+                input.placeholder = `${basePlaceholder} ${translations[currentLang].required}`;
                 input.setAttribute("data-placeholder", basePlaceholder);
             }
         });

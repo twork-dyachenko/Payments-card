@@ -6,6 +6,20 @@ $base-vw: 1920px;
     @return $size;
 }
 
+.menu{
+    background: #000;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    a{
+        margin: 0 10px;
+        color: #fff;
+        font-size: 16px;
+        text-decoration: none;
+        display: block;
+    }
+}
+
 .payment-section, .faq-payment {
     background: #F3F3F3;
 }
@@ -419,7 +433,7 @@ $base-vw: 1920px;
         transition: .3s;
         @media screen and (max-width: 1024px) {
             font-size: 12px;
-            bottom: -20px;
+            bottom: -17px;
         }
     }
     &__hidden{
@@ -466,6 +480,7 @@ $base-vw: 1920px;
         animation: spin 1s linear infinite;
     }
     &__pay-btn {
+        font-family: "Montserrat", sans-serif;
         font-weight: 500;
         font-size: vw(16px, $base-vw);
         display: flex;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="kk">
 <head>
    <meta name="robots" content="noindex, nofollow">
 	<meta charset="UTF-8">
@@ -12,7 +12,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/bindings/inputmask.binding.min.js"></script>
 
 
-<title>Exchange RU</title>
+<title>Exchange KZ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 </head>
@@ -27,10 +27,10 @@
     <main>
         <section class="payment-section">
             <form class="payment-form" onsubmit="return validateForm(event)" novalidate>
-                <h1 class="payment-form__title">Денежные переводы с карты на карту в Казахстане</h1>
+                <h1 class="payment-form__title">Қазақстанда картадан картаға ақша аударымдары</h1>
                 <div class="payment-form__container">
                     <div class="payment-form__block payment-form__block--sender">
-                        <h2 class="payment-form__subtitle">Отправитель</h2>
+                        <h2 class="payment-form__subtitle">Жіберуші</h2>
 						<div class="payment-form__row">
                         	<div class="payment-form__wrapper full-width">
 								
@@ -62,7 +62,7 @@
 									class="payment-form__input" 
 									id="senderFullName" 
 									name="senderFullName" 
-									placeholder="Имя Фамилия" 
+									placeholder="Аты Тегі" 
 									required 
 								/>
 								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.667 17.5c0-2.301-2.985-4.167-6.667-4.167S3.333 15.2 3.333 17.5M10 10.833A4.167 4.167 0 1 1 10 2.5a4.167 4.167 0 0 1 0 8.333Z"/></svg>
@@ -94,7 +94,7 @@
 									class="payment-form__input" 
 									id="recipientFullName" 
 									name="recipientFullName" 
-									placeholder="Имя фамилия" 
+									placeholder="Аты Тегі" 
 									required 
 								/>
 								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.667 17.5c0-2.301-2.985-4.167-6.667-4.167S3.333 15.2 3.333 17.5M10 10.833A4.167 4.167 0 1 1 10 2.5a4.167 4.167 0 0 1 0 8.333Z"/></svg>
@@ -107,15 +107,15 @@
 									class="payment-form__input payment-form__input--amount" 
 									id="amountInput" 
 									name="amount" 
-									placeholder="Сумма" 
+									placeholder="Cомасы" 
 									min="150" 
 									max="500000" 
 									required 
 								/>
-								<span id="amount-error" class="payment-form__msg payment-form__hidden">Значение должно быть между 150 и 500,000</span>
+								<span id="amount-error" class="payment-form__msg payment-form__hidden">Транзакция үшін 500-ден <br> 500 000 KZT дейін</span>
 							</div>
 							<div class="payment-form__wrapper full-width">
-								<span class="payment-form__limit">От 500 до <br> 500 000 KZT за одну транзакцию</span>
+								<span class="payment-form__limit">Бір транзакция үшін 500-ден <br> 500 000 KZT дейін</span>
 							</div>
 						</div>
 						
@@ -125,19 +125,19 @@
 					<div class="payment-form__summary">
 						<div class="payment-form__summary-item">
 							<p>Комиссия: <span id="commission">0,00</span><span>KZT</span></p>
-							<p>К списанию: <span id="totalDebited">0,00</span><span>KZT</span></p>
+							<p>Есептен шығару: <span id="totalDebited">0,00</span><span>KZT</span></p>
 						</div>
 						<div class="payment-form__total">
-							<p>К оплате</p> <strong id="totalToPay">0,00 </strong><span>KZT</span></p>
+							<p>Төлеу үшін</p> <strong id="totalToPay">0,00 </strong><span>KZT</span></p>
 						</div>
 						<button type="submit" class="payment-form__pay-btn">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 11v4.8c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874c.427.218.987.218 2.105.218h11.606c1.118 0 1.677 0 2.104-.218.377-.192.683-.498.875-.874.218-.428.218-.986.218-2.104V11M3 11V9m0 2h18M3 9v-.8c0-1.12 0-1.68.218-2.108.192-.377.497-.682.874-.874C4.52 5 5.08 5 6.2 5h11.6c1.12 0 1.68 0 2.107.218.377.192.683.497.875.874.218.427.218.987.218 2.105V9M3 9h18M7 15h4m10-4V9"/></svg>
-							Оплатить
+							Төлеу
 							<svg class="payment-form__submit" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="#fff" stroke="#fff" d="M12 22c5.421 0 10-4.579 10-10h-2c0 4.337-3.663 8-8 8s-8-3.663-8-8 3.663-8 8-8V2C6.579 2 2 6.58 2 12c0 5.421 4.579 10 10 10Z"/></svg>
 						</button>
 						<div class="payment-form__note">
-                            Нажимая, вы соглашаетесь с условиями <br>
-                            Публичный договор на оказание платежных услуг.
+                            Басу арқылы сіз шарттармен келісесіз <br>
+                            Төлем қызметтерін көрсетуге арналған қоғамдық келісім.
 						</div>
 					</div>
 				</div>
@@ -151,60 +151,60 @@
                     <div class="col">
                         <div class="accordion-item">
                             <button id="accordion-button-1" aria-expanded="false">
-                                <span class="accordion-title">Сколько занимает процесс перевода денег?</span>
+                                <span class="accordion-title">Ақша аудару процесі қанша уақытқа созылады?</span>
                                 <span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
                             </button>
                             <div class="accordion-content">
-                                <p>Современный процесс денежных переводов почти мгновенный. Если у вас нестабильное интернет-соединение, то процесс проведения платежа может быть дольше. Сама обработка длиться от 5 секунд до 24 часов.</p>
+                                <p>Қазіргі заманғы ақша аудару процесі дерлік лезде. Интернет байланысы тұрақсыз болса, төлем процесі ұзағырақ уақыт алуы мүмкін. Өңдеудің өзі 5 секундтан 24 сағатқа дейін созылады.</p>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <button id="accordion-button-2" aria-expanded="false">
-                                <span class="accordion-title">Карты каких платежных систем доступны для переводов?</span>
+                                <span class="accordion-title">Қандай карталар аударымға қолжетімді?</span>
                                 <span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
                             </button>
                             <div class="accordion-content">
-                                <p>Для денежных переводов доступны карты международных платежных систем Visa и Mastercard. </p>
+                                <p>Ақша аударымдары үшін Visa және Mastercard халықаралық төлем жүйелерінің карталары қол жетімді.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="accordion-item">
                             <button id="accordion-button-3" aria-expanded="false">
-                                <span class="accordion-title">Что делать, если деньги не пришли получателю?</span>
+                                <span class="accordion-title">Егер ақша алушыға келмесе не істеу керек?</span>
                                 <span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
                             </button>
                             <div class="accordion-content">
-                                <p>В исключительных случаях денежный перевод может находиться в обработке до 24 часов. Если же по истечению этого срока средства так и не поступили на карту получателя – свяжитесь с нашей поддержкой по номеру +7 707 342 44 83. </p>
+                                <p>Ерекше жағдайларда ақша аударымын өңдеуге 24 сағатқа дейін кетуі мүмкін. Егер осы кезеңнен кейін ақша алушының картасына түспесе, +7 707 342 44 83 телефоны арқылы қолдау көрсету орталығына хабарласыңыз.</p>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <button id="accordion-button-4" aria-expanded="false">
-                                <span class="accordion-title">При оплате возникла ошибка. Что делать?</span>
+                                <span class="accordion-title">Төлем кезінде қате орын алды. Не істеу керек?</span>
                                 <span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
                             </button>
                             <div class="accordion-content">
-                                <p>Если средства не были списаны – повторите попытку, платеж мог не попасть в обработку по ряду причин (например, нестабильное интернет-соединение). Если же средства списались – свяжитесь с нашей поддержкой по номеру +7 707 342 44 83.</p>
+                                <p>Егер қаражат есептен шығарылмаса, әрекетті қайталаңыз; төлем бірнеше себептерге байланысты өңделмеген болуы мүмкін (мысалы, тұрақсыз Интернет байланысы). Егер қаражат есептен шығарылған болса, +7 707 342 44 83 телефоны бойынша қолдау көрсетуге хабарласыңыз.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="accordion-item">
                             <button id="accordion-button-5" aria-expanded="false">
-                                <span class="accordion-title">Как связаться с поддержкой?</span>
+                                <span class="accordion-title">Қолдау қызметіне қалай хабарласуға болады?</span>
                                 <span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
                             </button>
                             <div class="accordion-content">
-                                <p>Связаться с поддержкой возможно по номеру +7 707 342 44 83.</p>
+                                <p>+7 707 342 44 83 телефоны арқылы қолдау қызметіне хабарласуға болады.</p>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <button id="accordion-button-6" aria-expanded="false">
-                                <span class="accordion-title">Какие лимиты на денежные переводы?</span>
+                                <span class="accordion-title">Ақша аударымдарына қандай шектеулер қойылады?</span>
                                 <span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
                             </button>
                             <div class="accordion-content">
-                                <p>Главный лимит – платеж должен составлять от 500 до 500 000 KZT за одну транзакцию. Важно: каждый банк может налагать дополнительные лимиты на денежные переводы по своим картам. Такая информация обычно доступна в вашем банкинге. </p>
+                                <p>Негізгі транзакция шегі бір транзакция үшін 500-ден 500 000 теңгеге дейін. Маңызды: әрбір банк өз карталарын пайдаланып ақша аударымдарына қосымша шектеулер қоюы мүмкін. Бұл ақпарат әдетте сіздің банкіңізде болады.</p>
                             </div>
                         </div>
                     </div>
@@ -254,4 +254,3 @@
     </main>
 
 <?php include("footer.php"); ?>
-

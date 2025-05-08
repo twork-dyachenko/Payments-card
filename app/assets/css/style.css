@@ -1,4 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.menu {
+  background: #000;
+  padding: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.menu a {
+  margin: 0 10px;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+}
+
 .payment-section, .faq-payment {
   background: #F3F3F3;
 }
@@ -524,7 +542,7 @@
 @media screen and (max-width: 1024px) {
   .payment-form__msg {
     font-size: 12px;
-    bottom: -20px;
+    bottom: -17px;
   }
 }
 .payment-form__hidden {
@@ -589,6 +607,7 @@
           animation: spin 1s linear infinite;
 }
 .payment-form__pay-btn {
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 0.8333333333vw;
   display: -webkit-box;

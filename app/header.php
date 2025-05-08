@@ -11,3 +11,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/bindings/inputmask.binding.min.js"></script>
 
+	<div class="menu">
+		<a href="index-ru.php">RU</a>
+		<a href="index-kz.php">KZ</a>
+		<a href="index.php">ENG</a>
+		<a href="payment-status.php">Payment status</a>
+	</div>
