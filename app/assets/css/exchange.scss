@@ -323,6 +323,9 @@ $base-vw: 1920px;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
         z-index: 2;
+        @media screen and (max-width: 1024px) {
+            top: calc(50% + 8px);
+        }
         &--icon{
             position: relative;
             display: flex;
@@ -370,8 +373,8 @@ $base-vw: 1920px;
             background: #F3F3F3;
             transform: translate(-50%, -50%);
             @media screen and (max-width: 1024px){
-                height: 60px;
-                width: 60px;
+                height: 70px;
+                width: 70px;
             }
         }
     }
@@ -574,7 +577,7 @@ $base-vw: 1920px;
                 line-height: vw(24.38px, $base-vw);
                 border-radius: vw(20px, $base-vw);
             }
-            @media (max-width: 520px) {
+            @media (max-width: 1024px) {
                 padding: 22.5px 70px 22.5px 20px;
                 font-size: 12px;
                 font-weight: 600;
@@ -680,7 +683,7 @@ $base-vw: 1920px;
                     margin: vw(24px, $base-vw) vw(20px, $base-vw);
                     max-width: vw(750px, $base-vw);
                 }
-                @media (max-width: 520px) {
+                @media (max-width: 1024px) {
                     font-size: 12px;
                     font-weight: 600;
                     line-height: 14.63px;
@@ -696,10 +699,37 @@ $base-vw: 1920px;
 .faq-payment{
     padding-bottom: vw(200px, $base-vw);
     margin-bottom: 0;
-    .col{
+    .accordion{
         display: flex;
         justify-content: space-between;
         gap: vw(16px, $base-vw);
+        @media screen and (max-width: 1024px){
+            flex-direction: column;
+            gap: 8px;
+        }
+        &-item{
+            width: 100%;
+            @media screen and (max-width: 1024px){
+                button{
+                    .icon{
+                        img{
+                            width: 18px;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 768px){
+                button{
+                    .icon{
+                        img{
+                            width: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .col{
         @media screen and (max-width: 1024px) {
             flex-wrap: wrap;
             gap: 8px;
@@ -719,38 +749,8 @@ $base-vw: 1920px;
             margin-bottom: 20px;
         }
     }
-    .accordion button .icon{
-        @media screen and (max-width: 1024px) {
-            // width: 16px;
-            // height: 16px;
-        }
-    }
     .accordion button[aria-expanded=true] + .accordion-content{
-        // max-height: 100%;
-        overflow-y: scroll;
-    }
-    .accordion-item{
-        width: 100%;
-        max-width: calc(50% - vw(8px, $base-vw));
-        @media screen and (max-width: 1024px){
-            max-width: 100%;
-            button{
-                .icon{
-                    img{
-                        width: 18px;
-                    }
-                }
-            }
-        }
-        @media screen and (max-width: 768px){
-            button{
-                .icon{
-                    img{
-                        width: 16px;
-                    }
-                }
-            }
-        }
+        max-height: 100%;
     }
     .container{
         max-width: vw(1602px, $base-vw);

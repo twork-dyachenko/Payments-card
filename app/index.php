@@ -139,17 +139,7 @@
 								<p>Modern money transfers are almost instant. If you have an unstable internet connection, the payment process may take longer. The processing itself lasts from 5 seconds to 24 hours.</p>
 							</div>
 						</div>
-						<div class="accordion-item">
-							<button id="accordion-button-2" aria-expanded="false">
-								<span class="accordion-title">What payment system cards are available for money transfers?</span>
-								<span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
-							</button>
-							<div class="accordion-content">
-								<p>International payment system cards Visa and Mastercard.</p>
-							</div>
-						</div>
-	                </div>
-					<div class="col">
+						
 						<div class="accordion-item">
 							<button id="accordion-button-3" aria-expanded="false">
 								<span class="accordion-title">The recipient hasn’t received the money. What can you do?</span>
@@ -159,17 +149,7 @@
 								<p>In exceptional cases, a money transfer may be delayed for up to 24 hours. If the funds haven’t reached the recipient's card even after this period, please contact our support at +7 707 342 44 83.</p>
 							</div>
 						</div>
-						<div class="accordion-item">
-							<button id="accordion-button-4" aria-expanded="false">
-								<span class="accordion-title">An error occurred during payment. What to do?</span>
-								<span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
-							</button>
-							<div class="accordion-content">
-								<p>If the funds were not debited, try again. The payment may not have been processed for a number of reasons (for example, an unstable internet connection). If the funds have been written off, please contact our support at +7 707 342 44 83.</p>
-							</div>
-						</div>
-	                </div>
-					<div class="col">
+						
 						<div class="accordion-item">
 							<button id="accordion-button-5" aria-expanded="false">
 								<span class="accordion-title">How to contact Pay+ support?</span>
@@ -179,17 +159,7 @@
 								<p>You can contact our support at +7 707 342 44 83.</p>
 							</div>
 						</div>
-						<div class="accordion-item">
-							<button id="accordion-button-6" aria-expanded="false">
-								<span class="accordion-title">What are the limits for money transfers?</span>
-								<span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
-							</button>
-							<div class="accordion-content">
-								<p>The main limit is: the payment must be from 500 to 500,000 KZT per transaction. Important: each bank may impose additional limits on money transfers on its cards. This information is usually available in your banking.</p>
-							</div>
-						</div>
-	                </div>
-					<div class="col">
+						
 						<div class="accordion-item">
 							<button id="accordion-button-7" aria-expanded="false">
 								<span class="accordion-title">What do I need p2p transfers for</span>
@@ -197,6 +167,45 @@
 							</button>
 							<div class="accordion-content">
 								<p>Card-to-card money transfers are among the world’s most popular financial services. This is no longer just a convenient option, but a necessary tool for everyday financial life. Pay for services, help your family, transfer funds between your bank accounts – all these tasks should be solved quickly, safely and without unnecessary steps. This is the principle of the Pay+. We have created a solution that combines fast online money transfers and high-end intuitive design. All you need is to enter the recipient's card number, indicate the amount and confirm the transaction. The process takes less than a minute, and the funds are credited almost instantly. The service operates in 24/7 mode, without days off and tech breaks.</p>
+							</div>
+						</div>
+						
+						<div class="accordion-item">
+							<button id="accordion-button-9" aria-expanded="false">
+								<span class="accordion-title">Why I should choose Pay+?</span>
+								<span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
+							</button>
+							<div class="accordion-content">
+								<p>We have spent a lot of time on the design to makePay+ interface simple and intuitive. The entire process is designed for a minimum user timespending and effort. We regularly update the platform, adding useful features and improving performance. In case of questions or difficulties, the support service is always in touch - quickly, politely and to the point. Pay+ money transfers are a combination of technology, reliability and comfort. We strive for maximum conversion, and therefore every transaction is important to us. Trust your card-to-card transfers to a platform that knows what’s important to you.</p>
+							</div>
+						</div>
+	                </div>
+					<div class="col">
+					<div class="accordion-item">
+							<button id="accordion-button-2" aria-expanded="false">
+								<span class="accordion-title">What payment system cards are available for money transfers?</span>
+								<span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
+							</button>
+							<div class="accordion-content">
+								<p>International payment system cards Visa and Mastercard.</p>
+							</div>
+						</div>
+<div class="accordion-item">
+							<button id="accordion-button-4" aria-expanded="false">
+								<span class="accordion-title">An error occurred during payment. What to do?</span>
+								<span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
+							</button>
+							<div class="accordion-content">
+								<p>If the funds were not debited, try again. The payment may not have been processed for a number of reasons (for example, an unstable internet connection). If the funds have been written off, please contact our support at +7 707 342 44 83.</p>
+							</div>
+						</div>
+<div class="accordion-item">
+							<button id="accordion-button-6" aria-expanded="false">
+								<span class="accordion-title">What are the limits for money transfers?</span>
+								<span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
+							</button>
+							<div class="accordion-content">
+								<p>The main limit is: the payment must be from 500 to 500,000 KZT per transaction. Important: each bank may impose additional limits on money transfers on its cards. This information is usually available in your banking.</p>
 							</div>
 						</div>
 						<div class="accordion-item">
@@ -208,18 +217,7 @@
 								<p>Security is our priority. Each transaction undergoes multi-level protection: automatic anti-fraud mechanisms and internal monitoring systems. Therefore, each Pay+ secure transfer meets the requirements of international payment standards and PCI DSS cybersecurity standards. We support cards of all major banks of Kazakhstan issued by Visa and Mastercard  international payment systems. This allows you to use card-to-card transfers in any situation – from quick transfer to relatives to business payments or other personal financial operations.</p>
 							</div>
 						</div>
-	                </div>
-					<div class="col">
-						<div class="accordion-item">
-							<button id="accordion-button-9" aria-expanded="false">
-								<span class="accordion-title">Why I should choose Pay+?</span>
-								<span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
-							</button>
-							<div class="accordion-content">
-								<p>We have spent a lot of time on the design to makePay+ interface simple and intuitive. The entire process is designed for a minimum user timespending and effort. We regularly update the platform, adding useful features and improving performance. In case of questions or difficulties, the support service is always in touch - quickly, politely and to the point. Pay+ money transfers are a combination of technology, reliability and comfort. We strive for maximum conversion, and therefore every transaction is important to us. Trust your card-to-card transfers to a platform that knows what’s important to you.</p>
-							</div>
-						</div>
-	                </div>
+					</div>
     	        </div>
 			</div>
 		</section>

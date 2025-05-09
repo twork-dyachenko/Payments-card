@@ -73,37 +73,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const senderPhoneInput = document.querySelector('[name="senderPhone"]');
     // Маска ввода номера телефона KZ
     senderPhoneInput.addEventListener('focus', (e) => {
-        if (!e.target.value.startsWith('+7 (7')) {
-            e.target.value = '+7 (7';
+        if (!e.target.value.startsWith('+7 (')) {
+            e.target.value = '+7 (';
         }
     });
     senderPhoneInput.addEventListener('input', (e) => {
         const input = e.target;
         let digits = input.value.replace(/\D/g, '');
-
-        if (!digits.startsWith('77')) {
-            digits = '77';
-        }
-
+    
         digits = digits.slice(0, 11);
-
+    
         const parts = [
             digits.slice(0, 1),   // 7
-            digits.slice(1, 4),   // 7XX
+            digits.slice(1, 4),   // XXX
             digits.slice(4, 7),   // XXX
             digits.slice(7, 9),   // XX
             digits.slice(9, 11),  // XX
         ];
-
+    
         let formatted = '+7';
-
+    
         if (parts[1]) formatted += ` (${parts[1]}`;
         if (parts[2]) formatted += `) ${parts[2]}`;
         if (parts[3]) formatted += `-${parts[3]}`;
         if (parts[4]) formatted += `-${parts[4]}`;
-
+    
         input.value = formatted;
     });
+    
 
 
     window.formatExpiry = (input) => {

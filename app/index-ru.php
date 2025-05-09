@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<div class="menu">
+    <div class="menu">
 		<a href="index-ru.php">RU</a>
 		<a href="index-kz.php">KZ</a>
 		<a href="index.php">ENG</a>
@@ -161,17 +161,6 @@
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <button id="accordion-button-2" aria-expanded="false">
-                                <span class="accordion-title">Карты каких платежных систем доступны для переводов?</span>
-                                <span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
-                            </button>
-                            <div class="accordion-content">
-                                <p>Для денежных переводов доступны карты международных платежных систем Visa и Mastercard. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="accordion-item">
                             <button id="accordion-button-3" aria-expanded="false">
                                 <span class="accordion-title">Что делать, если деньги не пришли получателю?</span>
                                 <span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
@@ -181,23 +170,34 @@
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <button id="accordion-button-4" aria-expanded="false">
-                                <span class="accordion-title">При оплате возникла ошибка. Что делать?</span>
-                                <span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
-                            </button>
-                            <div class="accordion-content">
-                                <p>Если средства не были списаны – повторите попытку, платеж мог не попасть в обработку по ряду причин (например, нестабильное интернет-соединение). Если же средства списались – свяжитесь с нашей поддержкой по номеру +7 707 342 44 83.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="accordion-item">
                             <button id="accordion-button-5" aria-expanded="false">
                                 <span class="accordion-title">Как связаться с поддержкой?</span>
                                 <span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
                             </button>
                             <div class="accordion-content">
                                 <p>Связаться с поддержкой возможно по номеру +7 707 342 44 83.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="col">
+                        <div class="accordion-item">
+                            <button id="accordion-button-2" aria-expanded="false">
+                                <span class="accordion-title">Карты каких платежных систем доступны для переводов?</span>
+                                <span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Для денежных переводов доступны карты международных платежных систем Visa и Mastercard. </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-4" aria-expanded="false">
+                                <span class="accordion-title">При оплате возникла ошибка. Что делать?</span>
+                                <span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Если средства не были списаны – повторите попытку, платеж мог не попасть в обработку по ряду причин (например, нестабильное интернет-соединение). Если же средства списались – свяжитесь с нашей поддержкой по номеру +7 707 342 44 83.</p>
                             </div>
                         </div>
                         <div class="accordion-item">
@@ -210,46 +210,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col">
-                        <div class="accordion-item">
-                            <button id="accordion-button-7" aria-expanded="false">
-                                <span class="accordion-title"> </span>
-                                <span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
-                            </button>
-                            <div class="accordion-content">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <button id="accordion-button-8" aria-expanded="false">
-                                <span class="accordion-title"> </span>
-                                <span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
-                            </button>
-                            <div class="accordion-content">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="accordion-item">
-                            <button id="accordion-button-9" aria-expanded="false">
-                                <span class="accordion-title"> </span>
-                                <span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
-                            </button>
-                            <div class="accordion-content">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <button id="accordion-button-10" aria-expanded="false">
-                                <span class="accordion-title"> </span>
-                                <span class="icon" aria-hidden="true"><img src="assets/img/payment-arrow.svg" alt=""></span>
-                            </button>
-                            <div class="accordion-content">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </section>

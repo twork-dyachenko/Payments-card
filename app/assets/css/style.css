@@ -410,6 +410,11 @@
           transform: translateX(-50%) translateY(-50%);
   z-index: 2;
 }
+@media screen and (max-width: 1024px) {
+  .payment-form__arrow {
+    top: calc(50% + 8px);
+  }
+}
 .payment-form__arrow--icon {
   position: relative;
   display: -webkit-box;
@@ -469,8 +474,8 @@
 }
 @media screen and (max-width: 1024px) {
   .payment-form__arrow::before {
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
   }
 }
 .payment-form__summary {
@@ -729,7 +734,7 @@
     border-radius: 1.0416666667vw;
   }
 }
-@media (max-width: 520px) {
+@media (max-width: 1024px) {
   .faq .accordion button {
     padding: 22.5px 70px 22.5px 20px;
     font-size: 12px;
@@ -864,7 +869,7 @@
     max-width: 39.0625vw;
   }
 }
-@media (max-width: 520px) {
+@media (max-width: 1024px) {
   .faq .accordion .accordion-content p {
     font-size: 12px;
     font-weight: 600;
@@ -878,7 +883,7 @@
   padding-bottom: 10.4166666667vw;
   margin-bottom: 0;
 }
-.faq-payment .col {
+.faq-payment .accordion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -886,6 +891,28 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 0.8333333333vw;
+}
+@media screen and (max-width: 1024px) {
+  .faq-payment .accordion {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 8px;
+  }
+}
+.faq-payment .accordion-item {
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .faq-payment .accordion-item button .icon img {
+    width: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .faq-payment .accordion-item button .icon img {
+    width: 16px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .faq-payment .col {
@@ -914,24 +941,7 @@
   }
 }
 .faq-payment .accordion button[aria-expanded=true] + .accordion-content {
-  overflow-y: scroll;
-}
-.faq-payment .accordion-item {
-  width: 100%;
-  max-width: calc(50% - 0.4166666667vw);
-}
-@media screen and (max-width: 1024px) {
-  .faq-payment .accordion-item {
-    max-width: 100%;
-  }
-  .faq-payment .accordion-item button .icon img {
-    width: 18px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .faq-payment .accordion-item button .icon img {
-    width: 16px;
-  }
+  max-height: 100%;
 }
 .faq-payment .container {
   max-width: 83.4375vw;
