@@ -40,10 +40,6 @@
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 11v4.8c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874c.427.218.987.218 2.105.218h11.606c1.118 0 1.677 0 2.104-.218.377-.192.683-.498.875-.874.218-.428.218-.986.218-2.104V11M3 11V9m0 2h18M3 9v-.8c0-1.12 0-1.68.218-2.108.192-.377.497-.682.874-.874C4.52 5 5.08 5 6.2 5h11.6c1.12 0 1.68 0 2.107.218.377.192.683.497.875.874.218.427.218.987.218 2.105V9M3 9h18M7 15h4m10-4V9"/></svg>
 							</div>
                             <div class="payment-form__wrapper half-width">
-								<input type="text" class="payment-form__input" name="cvv" placeholder="CVV" required pattern="\d{3}" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 3)" />
-								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none"><path stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.692 8H6c-.933 0-1.4 0-1.757.182-.313.16-.568.414-.728.728-.182.356-.182.823-.182 1.757v4.667c0 .933 0 1.4.182 1.756.16.314.415.569.728.729C4.6 18 5.066 18 5.998 18h8.005c.931 0 1.397 0 1.753-.181.314-.16.57-.415.73-.73.18-.355.18-.821.18-1.753v-4.672c0-.932 0-1.398-.18-1.754a1.668 1.668 0 0 0-.73-.728C15.4 8 14.934 8 14 8h-1.692M7.692 8h4.616M7.692 8a.192.192 0 0 1-.192-.192V5.5a2.5 2.5 0 0 1 5 0v2.308a.193.193 0 0 1-.192.192"/></svg>
-							</div>
-                            <div class="payment-form__wrapper half-width">
 								<input 
 									type="text" 
 									class="payment-form__input" 
@@ -55,6 +51,10 @@
 									oninput="formatExpiry(this)" 
 								/>
 								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.667 3.333H6c-.933 0-1.4 0-1.757.182-.313.16-.568.415-.728.728-.182.357-.182.824-.182 1.757v.667m3.334-3.334h6.667m-6.667 0V1.667m6.667 1.666H14c.934 0 1.4 0 1.756.182.314.16.57.415.73.728.18.356.18.823.18 1.754v.67m-3.332-3.334V1.667m-10 5V14c0 .934 0 1.4.181 1.757.16.313.415.568.728.728.356.182.823.182 1.755.182h8.005c.931 0 1.397 0 1.753-.182.314-.16.57-.415.73-.728.18-.357.18-.822.18-1.754V6.667m-13.332 0h13.333m-3.334 6.666h.002v.002h-.002v-.002Zm-3.333 0h.002v.002H10v-.002Zm-3.333 0h.002v.002h-.002v-.002ZM13.335 10v.002h-.002V10h.002ZM10 10h.002v.002H10V10Zm-3.333 0h.002v.002h-.002V10Z"/></svg>
+							</div>
+                            <div class="payment-form__wrapper half-width">
+								<input type="text" class="payment-form__input" name="cvv" placeholder="CVV" required pattern="\d{3}" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 3)" />
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none"><path stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.692 8H6c-.933 0-1.4 0-1.757.182-.313.16-.568.414-.728.728-.182.356-.182.823-.182 1.757v4.667c0 .933 0 1.4.182 1.756.16.314.415.569.728.729C4.6 18 5.066 18 5.998 18h8.005c.931 0 1.397 0 1.753-.181.314-.16.57-.415.73-.73.18-.355.18-.821.18-1.753v-4.672c0-.932 0-1.398-.18-1.754a1.668 1.668 0 0 0-.73-.728C15.4 8 14.934 8 14 8h-1.692M7.692 8h4.616M7.692 8a.192.192 0 0 1-.192-.192V5.5a2.5 2.5 0 0 1 5 0v2.308a.193.193 0 0 1-.192.192"/></svg>
 							</div>
                         </div>
 						<div class="payment-form__row">
