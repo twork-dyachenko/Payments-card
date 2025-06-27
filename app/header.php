@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/bindings/inputmask.binding.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
 
 	<div class="menu">
 		<a href="index-ru.php">RU</a>
@@ -18,4 +20,7 @@
 		<a href="payment-status-ru.php">Status RU</a>
 		<a href="payment-status-kz.php">Status KZ</a>
 		<a href="payment-status.php">Status ENG</a>
+		<a href="payment-card.php">Payment Card ENG</a>
+		<a href="services.php">Services</a>
+
 	</div>

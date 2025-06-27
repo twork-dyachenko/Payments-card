@@ -1,0 +1,253 @@
+$base-vw: 1920px;
+@function vw($px-vw, $base-vw) {
+    $size: calc(($px-vw * 100vw) / $base-vw);
+    @return $size;
+}
+
+.payment-card{
+    // padding: vw(64px, $base-vw) vw(80px, $base-vw);
+    // max-width: calc(vw(520px, $base-vw) + vw(56px, $base-vw));
+    max-width: vw(520px, $base-vw);
+    width: 100%;
+    margin: 0 auto;
+    margin-top: vw(12px, $base-vw);
+    .payment-form{
+        &__submit--visible{
+            display: block;
+        }
+    }
+    @media screen and (max-width: 1024px){
+        // min-height: 100vh;
+        margin-top: 0;
+        padding: 0;
+        padding-top: 12px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &:first-child{
+            padding-bottom: 0;
+        }
+        h1{
+            display: none;
+        }
+    }
+
+    .payment-form{
+        // background: #fff;
+        border-radius: vw(20px, $base-vw);
+        padding-top: 0;
+        padding-bottom: 0;
+        // padding: vw(40px, $base-vw) vw(28px, $base-vw);
+        &__container{
+            grid-template-columns: auto;
+        }
+        &__block{
+            padding: 0;
+        }
+        &__wrapper{
+            svg{
+                left: vw(15px, $base-vw);
+            }
+        }
+        &__input{
+            border: 1px solid #999999;
+            height: vw(52px, $base-vw);
+            background: #fff;
+            font-size: vw(14px, $base-vw);
+            padding-left: 40px;
+            &:focus{
+                border-color: #000;
+            }
+        }
+        .half-width{
+            max-width: 100%;
+            @media screen and (max-width: 1024px){
+                max-width: calc(50% - 4px);
+                
+            }
+        }
+        &__pay-btn{
+            margin-top: 0;
+            height: vw(51px, $base-vw);
+            @media screen and (max-width: 1024px){
+                height: 44px;
+            }
+        }
+        &__note{
+            padding-top: vw(20px, $base-vw);
+            font-size: vw(14px, $base-vw);
+            @media screen and (max-width: 1024px){
+                text-align: center;
+                padding-top: 16px;
+                font-size: 12px;
+            }
+        }
+        @media screen and (max-width: 1024px){
+            width: 100%;
+            margin-top: 28px;
+            padding: 0 16px;
+            border-radius: 12px;
+            &__input{
+                height: 44px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: vw(28px, $base-vw);
+        padding-bottom: vw(28px, $base-vw);
+        @media screen and (max-width: 1024px){
+            gap: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    &__title{
+        font-size: vw(32px, $base-vw);
+        font-weight: 600;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: vw(40px, $base-vw);
+
+        
+        @media screen and (max-width: 1024px){
+            font-size: 20px;
+        }
+    }
+    &__body{
+        background: #fff;
+        border-radius: vw(20px, $base-vw);
+        padding: vw(40px, $base-vw) vw(28px, $base-vw);
+        &-item{
+            
+            padding-top: vw(20px, $base-vw);
+            border-top: 1px solid #A1A1A1;
+            // border-bottom: 1px solid #A1A1A1;
+            display: flex;
+            flex-direction: column;
+            gap: vw(12px, $base-vw);
+            @media screen and (max-width: 1024px){
+                gap: 8px;
+                padding: 20px 0;
+            }
+            &:first-child{
+                border-top: 0;
+                padding-bottom: vw(20px, $base-vw);
+                padding-top: 0;
+                @media screen and (max-width: 1024px){
+                    padding-bottom: 20px;
+                }
+            }
+            div{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: vw(14px, $base-vw);
+                @media screen and (max-width: 1024px){
+                    font-size: 12px;
+                }
+            }
+            p{
+                color: #A1A1A1;
+                font-weight: 500;
+            }
+            span{
+                font-weight: 600;
+                text-align: right;
+                color: #000;                
+            }
+        }
+        @media screen and (max-width: 1024px){
+            padding: 24px 12px;
+            border-radius: 12px;
+        }
+    }
+    &__footer{
+        padding-top: vw(20px, $base-vw);
+        @media screen and (max-width: 1024px){
+            padding-top: 0px;
+        }
+        button{
+            margin-top: vw(16px, $base-vw);
+            @media screen and (max-width: 1024px){
+                margin-top: 8px;
+            }
+        }
+    }
+    &__btn{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: vw(16px, $base-vw);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: vw(8px, $base-vw);
+        height: vw(63px, $base-vw);
+        border: 1px solid #000;
+        color: white;
+        border-radius: vw(12px, $base-vw);
+        cursor: pointer;
+        width: 100%;
+        transition: .3s;
+        &:disabled{
+            background: #999999;
+        }
+        svg path{
+            transition: .3s;
+        }
+        &:hover{
+            background: transparent;
+            color: #000;
+            svg{
+                path{
+                    stroke: #000;
+                }
+            }
+        }
+        @media screen and (max-width: 1024px){
+            font-size: 12px;
+            gap: 8px;
+            height: 51px;
+            border-radius: 8px;
+        }
+        &.payment-status__btn--black{
+            background: black;
+            &:hover{
+                background: transparent;
+            }
+
+        }
+        &.payment-status__btn--light{
+            background: transparent;
+            color: #000;
+            &:hover{
+                color: #fff;
+                background: #000;
+                svg{
+                    path{
+                        stroke: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+.payment-logo{
+    margin-top: 40px;
+    display: flex;
+    gap: vw(16px, $base-vw);
+    img{
+        width: 38px;
+    }
+    @media screen and (max-width: 1024px){
+        margin-top: 28px;
+        gap: 16px;
+    }
+}

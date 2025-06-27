@@ -231,6 +231,8 @@ $base-vw: 1920px;
     .accordion button[aria-expanded=true] + .accordion-content{
         max-height: 100%;
     }
+}
+.faq-payment, .services, .services__text{
     .container{
         max-width: vw(1602px, $base-vw);
         width: 100%;
