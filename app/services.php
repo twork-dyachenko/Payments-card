@@ -3,7 +3,7 @@
 
 	$langFile = "lang/{$currentLang}/services.php";
 	if (!file_exists($langFile)) {
-		$langFile = "lang/ru.php";
+		$langFile = "lang/ru/services.php";
 	}
 	$lang = include $langFile;
 
@@ -23,7 +23,7 @@
             <div class="container">
                 <div class="services__header">
                     <div class="services__tab">
-                        <span><a href="services.php"><?= $lang['breadcrumb_services']?></a></span>
+                        <span><a href="services.php"><?= htmlspecialchars($lang['services_menu']['main']) ?></a></span>
                     </div>
                     <div class="services__select">
 						<div class="services-search__wrapper">

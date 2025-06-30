@@ -4,8 +4,12 @@ return [
   'breadcrumb_services' => 'Сервисы',
   
   'search_placeholder' => 'Поиск',
-  
+  'services_tab' => [
+    'main' => 'Сервисы',
+    'other' => 'Прочее',
+  ],
   'services_menu' => [
+    'main' => 'Сервисы',
     'telephony' => 'Телефония',
     'finance' => 'Фин. организации',
     'p2p' => 'С карты на карту',

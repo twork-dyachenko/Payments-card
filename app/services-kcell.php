@@ -1,15 +1,15 @@
 <?php 
 	$currentLang = $_GET['lang'] ?? 'ru';
 
-	$langFile = "lang/{$currentLang}/services-games.php";
+	$langFile = "lang/{$currentLang}/services-mobile.php";
 	if (!file_exists($langFile)) {
-		$langFile = "lang/ru/services-games.php";
+		$langFile = "lang/ru/services-mobile.php";
 	}
 	$lang = include $langFile;
 
 	include("header.php");
 ?>
-<title>Services Steam</title>
+<title>Services kcell ENG</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <head>
@@ -24,21 +24,24 @@
 					<svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M1 1L4 4L1 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 					</svg>
-					<span><span><a href="services-steam.php"><b><?= htmlspecialchars($lang['services_text__steam']['title']) ?></b></a></span></span>
-
+					<span><a href="services-mobile.php"><?= htmlspecialchars($lang['services_tab']['telephony']) ?></a></span>
+					<svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1 1L4 4L1 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					<span><span><a href="services-kcell.php"><b><?= htmlspecialchars($lang['services_text__mobile-kcell']['title']) ?></b></a></span></span>
 				</div>
 			</div>
-			<?php include("component/form-wallet.php"); ?>
+            <?php include("component/form-mobile.php"); ?>
         </section>
 
         <section class="services__text">
-            <div class="container">
-                <div class="services__text-item">
-                    <h1><?= $lang['services_text__steam']['title'] ?></h1>
-                    <p><?= $lang['services_text__steam']['text'] ?></p>
-                </div>
-            </div>
-        </section>
+			<div class="container">
+				<div class="services__text-item">
+				<h1><?= $lang['services_text__mobile-kcell']['title'] ?></h1>
+				<p><?= $lang['services_text__mobile-kcell']['text'] ?></p>
+				</div>
+			</div>
+		</section>
 
 		<?php include("component/faq-services.php"); ?>
     </main>

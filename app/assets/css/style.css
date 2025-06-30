@@ -1628,7 +1628,7 @@
 }
 .services__text {
   background: #F3F3F3;
-  padding-bottom: 6.25vw;
+  padding-bottom: 8.3333333333vw;
 }
 .services__text-item {
   display: -webkit-box;
@@ -1676,7 +1676,7 @@
   height: 3.125vw;
   width: 100%;
   padding: 0.625vw 0.9375vw;
-  padding-left: 2.3958333333vw;
+  padding-left: 2.6041666667vw;
   font-weight: 500;
   font-size: 0.8333333333vw;
   border: 1px solid #fff;
@@ -1723,10 +1723,12 @@
 }
 .services__tell .payment-form {
   padding-top: 0;
+  padding-bottom: 8.3333333333vw;
 }
 @media screen and (max-width: 1024px) {
   .services__tell .payment-form {
     padding-top: 0;
+    padding-bottom: 100px;
   }
 }
 .services__tell .payment-form__submit--visible {
@@ -1783,6 +1785,13 @@
   .services {
     padding-bottom: 100px;
   }
+  .services__tell .services__header {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .services__tell .services__header span {
+    text-align: center;
+  }
   .services__tell .payment-form__block {
     padding: 24px 12px;
   }
@@ -1801,6 +1810,8 @@
     margin-top: 8px;
   }
   .services__header {
+    padding-left: 0;
+    padding-right: 0;
     padding-bottom: 28px;
     padding-top: 40px;
     -webkit-box-orient: vertical;

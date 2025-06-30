@@ -25,7 +25,7 @@
             <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 1L4 4L1 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span><a href="#"><b><?= htmlspecialchars($lang['services_tab']['finance']) ?></b></a></span>
+            <span><a href="services-fin.php"><b><?= htmlspecialchars($lang['services_tab']['finance']) ?></b></a></span>
           </div>
           <div class="services__select">
             <div class="services-search__wrapper">
@@ -55,14 +55,14 @@
       </div>
     </section>
 
-    <div class="services__text">
+    <section class="services__text">
       <div class="container">
         <div class="services__text-item">
-          <h1><?= $lang['services_text']['title'] ?></h1>
-          <p><?= $lang['services_text']['text'] ?></p>
+          <h1><?= $lang['finance_text__category']['title'] ?></h1>
+          <p><?= $lang['finance_text__category']['text'] ?></p>
         </div>
       </div>
-    </div>
+    </section>
 
     <?php include("component/faq-services.php"); ?>
 	

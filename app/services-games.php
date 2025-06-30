@@ -52,14 +52,14 @@
       </div>
     </section>
 
-    <div class="services__text">
+    <section class="services__text">
       <div class="container">
         <div class="services__text-item">
           <h1><?= $lang['services_text']['title'] ?></h1>
           <p><?= $lang['services_text']['text'] ?></p>
         </div>
       </div>
-    </div>
+    </section>
 
     <?php include("component/faq-services.php"); ?>
 	

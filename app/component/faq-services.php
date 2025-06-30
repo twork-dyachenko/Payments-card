@@ -3,7 +3,7 @@ $currentLang = $_GET['lang'] ?? 'ru';
 
 $faqFile = "lang/{$currentLang}/faq-services.php";
 if (!file_exists($faqFile)) {
-    $faqFile = "lang/{$currentLang}/faq-services.php";
+    $faqFile = "lang/ru/faq-services.php";
 }
 $lang = include $faqFile;
 ?>

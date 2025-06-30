@@ -28,7 +28,7 @@
 					<svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M1 1L4 4L1 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 					</svg>
-					<span><span><a href="services-beeline.php"><b>Beeline</b></a></span></span>
+					<span><span><a href="services-beeline.php"><b><?= htmlspecialchars($lang['services_text__mobile-beeline']['title']) ?></b></a></span></span>
 				</div>
 			</div>
             <?php include("component/form-mobile.php"); ?>
@@ -44,7 +44,6 @@
 		</section>
 
 		<?php include("component/faq-services.php"); ?>
-
     </main>
 
 <?php include("footer.php"); ?>

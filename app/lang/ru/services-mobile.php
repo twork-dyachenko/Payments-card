@@ -11,9 +11,9 @@ return [
 
   'services_list' => [
     ['url' => 'services-beeline.php', 'img' => 'icon-beeline.png', 'alt' => 'Icon Beeline', 'title' => 'Beeline'],
-    ['url' => 'services-beeline.php', 'img' => 'icon-kcell.png', 'alt' => 'Icon K-cell', 'title' => 'K-cell'],
-    ['url' => 'services-beeline.php', 'img' => 'icon-activ.png', 'alt' => 'Icon Activ', 'title' => 'Activ'],
-    ['url' => 'services-beeline.php', 'img' => 'icon-tele2.png', 'alt' => 'Icon TELE2', 'title' => 'TELE2'],
+    ['url' => 'services-kcell.php', 'img' => 'icon-kcell.png', 'alt' => 'Icon K-cell', 'title' => 'K-cell'],
+    ['url' => 'services-activ.php', 'img' => 'icon-activ.png', 'alt' => 'Icon Activ', 'title' => 'Activ'],
+    ['url' => 'services-tele2.php', 'img' => 'icon-tele2.png', 'alt' => 'Icon TELE2', 'title' => 'TELE2'],
   ],
 
   'services_text__mobile-category' => [

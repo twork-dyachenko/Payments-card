@@ -22,5 +22,24 @@
 		<a href="payment-status.php">Status ENG</a>
 		<a href="payment-card.php">Payment Card ENG</a>
 		<a href="services.php">Services</a>
+<?php
+$currentLang = $_GET['lang'] ?? 'ru';
+?>
+
+<form method="get" onchange="this.submit()" style="margin-left: auto;">
+    <select name="lang">
+        <option value="kz" <?= $currentLang === 'kz' ? 'selected' : '' ?>>KZ</option>
+        <option value="ru" <?= $currentLang === 'ru' ? 'selected' : '' ?>>RU</option>
+        <option value="eng" <?= $currentLang === 'eng' ? 'selected' : '' ?>>EN</option>
+    </select>
+    <?php
+    // Зберігаємо інші параметри запиту, окрім lang
+    foreach ($_GET as $key => $value) {
+        if ($key !== 'lang') {
+            echo "<input type='hidden' name='" . htmlspecialchars($key) . "' value='" . htmlspecialchars($value) . "' />";
+        }
+    }
+    ?>
+</form>
 
 	</div>

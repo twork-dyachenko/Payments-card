@@ -142,17 +142,61 @@ function setupPaymentForm({
 
     const touchedMap = new Map();
 
-    inputs.forEach((input) => {
+    inputs.forEach((input, index) => {
       touchedMap.set(input, false);
     
       input.addEventListener("input", () => {
         if (input.name === "amount") updateAmountSummary();
     
-        // Валидируем, но не показываем ошибку (не подсвечиваем)
         const isValidNow = validateInput(input, false);
-    
-        // Если поле стало валидным, ставим touched=true чтобы кнопку активировать
         if (isValidNow) touchedMap.set(input, true);
+    
+        // Авто-переход фокуса
+        // Убираем пробелы из значения для подсчета длины (для card и других)
+        let valLength = input.value.replace(/\s/g, '').length;
+    
+        // Особые условия по имени поля
+        switch (input.name) {
+          case 'senderCard':
+            // 16 цифр для карты
+            if (valLength >= 16) {
+              focusNext(index);
+            }
+            break;
+          case 'expiry':
+            // Длина с форматом "MM / YY" = 7 символов, но учитываем 5 значимых (цифры + " / ")
+            if (input.value.length >= 7) {
+              focusNext(index);
+            }
+            break;
+          case 'cvv':
+            if (valLength >= 3) {
+              focusNext(index);
+            }
+            break;
+          case 'senderFullName':
+            // Можно добавить логику, например, если введено 2 слова, то переключаем фокус
+            if (/^\S+\s+\S+/.test(input.value.trim())) {
+              focusNext(index);
+            }
+            break;
+          case 'senderPhone':
+            // Номер телефона +7 (XXX) XXX-XX-XX = фиксированная длина 18 символов
+            if (input.value.length >= 18) {
+              focusNext(index);
+            }
+            break;
+          case 'amount':
+            // Например, если длина >= 1 — можно переходить (настраиваем по необходимости)
+            break;
+          default:
+            // Для других полей с maxlength
+            const maxLength = input.getAttribute('maxlength');
+            if (maxLength && valLength >= maxLength) {
+              focusNext(index);
+            }
+            break;
+        }
     
         checkFormValidity();
       });
@@ -161,14 +205,21 @@ function setupPaymentForm({
         const value = input.value.trim();
         if (value !== "") {
           touchedMap.set(input, true);
-    
-          // При уходе с поля показываем ошибку если есть
           validateInput(input, true);
         }
         checkFormValidity();
         if (input.name === "amount") updateAmountSummary();
       });
     });
+    
+    function focusNext(currentIndex) {
+      const nextInput = inputs[currentIndex + 1];
+      if (nextInput) {
+        nextInput.focus();
+      }
+    }
+    
+    
     
 
     // 🔄 Принудительная проверка при загрузке (например, при автозаполнении браузером)
@@ -348,3 +399,56 @@ setupPaymentForm({
   }
 });
 
+const data = [
+  { label: "Activ", url: "/services-activ.php" },
+  { label: "TELE2", url: "/services-tele2.php" },
+  { label: "Zaimer", url: "/services-zaimer.php" },
+  { label: "Koke", url: "/services-koke.php" },
+  { label: "AltynCoin", url: "/services-altyn.php" },
+  { label: "Steam", url: "/services-steam.php" },
+  { label: "Olimpbet", url: "/services-steam.php" },
+  { label: "Winline", url: "/services-steam.php" },
+];
+
+const input = document.querySelector(".services-search__input");
+const list = document.getElementById("services-search__list");
+
+function renderList(items) {
+  list.innerHTML = "";
+  if (items.length === 0) {
+    list.style.display = "none";
+    return;
+  }
+
+  items.forEach((item) => {
+    const div = document.createElement("div");
+    div.classList.add("services-search__item");
+    div.textContent = item.label;
+    div.onclick = () => {
+      window.location.href = item.url;
+    };
+    list.appendChild(div);
+  });
+
+  list.style.display = "block";
+}
+
+input.addEventListener("input", function () {
+  const query = this.value.trim().toLowerCase();
+  const filtered = data.filter((item) =>
+    item.label.toLowerCase().includes(query)
+  );
+  renderList(filtered);
+});
+
+input.addEventListener("focus", function () {
+  if (!this.value.trim()) {
+    renderList(data);
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".services-search__wrapper")) {
+    list.style.display = "none";
+  }
+});

@@ -81,8 +81,7 @@ $base-vw: 1920px;
             gap: vw(12px, $base-vw);
             text-decoration: none;
         }
-
-        
+  
         span{
             font-weight: 500;
             font-size: vw(16px, $base-vw);
@@ -92,7 +91,7 @@ $base-vw: 1920px;
     }
     &__text{
         background: #F3F3F3;
-        padding-bottom: vw(120px, $base-vw);
+        padding-bottom: vw(160px, $base-vw);
         &-item{
             display: flex;
             justify-content: center;
@@ -126,7 +125,6 @@ $base-vw: 1920px;
         &__wrapper {
             position: relative;
             width: vw(606px, $base-vw);
-            
         }
     
         &__input {
@@ -134,7 +132,7 @@ $base-vw: 1920px;
             height: vw(60px, $base-vw);
             width: 100%;
             padding: vw(12px, $base-vw) vw(18px, $base-vw);
-            padding-left: vw(46px, $base-vw);
+            padding-left: vw(50px, $base-vw);
             font-weight: 500;
             font-size: vw(16px, $base-vw);
             border: 1px solid #fff;
@@ -185,8 +183,10 @@ $base-vw: 1920px;
     &__tell{
         .payment-form{
             padding-top: 0;
+            padding-bottom: vw(160px, $base-vw);
             @media screen and (max-width: 1024px){
                 padding-top: 0;
+                padding-bottom: 100px;
                 
             }
             &__submit--visible{
@@ -237,6 +237,13 @@ $base-vw: 1920px;
     @media screen and (max-width: 1024px) {
         padding-bottom: 100px;
         &__tell{
+            .services__header{
+                padding-left: 12px;
+                padding-right: 12px;
+                span{
+                    text-align: center;
+                }
+            }
             .payment-form{
                 &__block{
                     padding: 24px 12px;
@@ -258,8 +265,8 @@ $base-vw: 1920px;
             }
         }
         &__header{
-            // padding-left: 0;
-            // padding-right: 0;
+            padding-left: 0;
+            padding-right: 0;
             padding-bottom: 28px;
             padding-top: 40px;
             flex-direction: column;
