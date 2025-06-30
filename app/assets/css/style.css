@@ -1528,6 +1528,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 83.4375vw;
+  margin: auto;
+}
+@media screen and (max-width: 1024px) {
+  .services__header {
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 .services__tab {
   display: -webkit-box;
@@ -1712,6 +1721,14 @@
   background-color: #000;
   color: #fff;
 }
+.services__tell .payment-form {
+  padding-top: 0;
+}
+@media screen and (max-width: 1024px) {
+  .services__tell .payment-form {
+    padding-top: 0;
+  }
+}
 .services__tell .payment-form__submit--visible {
   display: block;
 }
@@ -1784,8 +1801,6 @@
     margin-top: 8px;
   }
   .services__header {
-    padding-left: 0;
-    padding-right: 0;
     padding-bottom: 28px;
     padding-top: 40px;
     -webkit-box-orient: vertical;

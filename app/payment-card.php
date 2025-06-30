@@ -1,4 +1,14 @@
-<?php include("header.php"); ?>
+<?php 
+	$currentLang = $_GET['lang'] ?? 'ru';
+
+	$langFile = "lang/{$currentLang}.php";
+	if (!file_exists($langFile)) {
+		$langFile = "lang/ru.php";
+	}
+	$lang = include $langFile;
+
+	include("header.php");
+?>
 <title>Exchange ENG</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
