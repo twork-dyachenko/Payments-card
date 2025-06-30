@@ -5,8 +5,6 @@ $base-vw: 1920px;
 }
 
 .payment-card{
-    // padding: vw(64px, $base-vw) vw(80px, $base-vw);
-    // max-width: calc(vw(520px, $base-vw) + vw(56px, $base-vw));
     max-width: vw(520px, $base-vw);
     width: 100%;
     margin: 0 auto;
@@ -17,7 +15,6 @@ $base-vw: 1920px;
         }
     }
     @media screen and (max-width: 1024px){
-        // min-height: 100vh;
         margin-top: 0;
         padding: 0;
         padding-top: 12px;
@@ -34,11 +31,9 @@ $base-vw: 1920px;
     }
 
     .payment-form{
-        // background: #fff;
         border-radius: vw(20px, $base-vw);
         padding-top: 0;
         padding-bottom: 0;
-        // padding: vw(40px, $base-vw) vw(28px, $base-vw);
         &__container{
             grid-template-columns: auto;
         }
@@ -115,8 +110,6 @@ $base-vw: 1920px;
         text-align: center;
         margin: 0 auto;
         margin-bottom: vw(40px, $base-vw);
-
-        
         @media screen and (max-width: 1024px){
             font-size: 20px;
         }
@@ -129,7 +122,6 @@ $base-vw: 1920px;
             
             padding-top: vw(20px, $base-vw);
             border-top: 1px solid #A1A1A1;
-            // border-bottom: 1px solid #A1A1A1;
             display: flex;
             flex-direction: column;
             gap: vw(12px, $base-vw);

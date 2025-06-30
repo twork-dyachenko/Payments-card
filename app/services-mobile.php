@@ -16,7 +16,6 @@
 
 <body>
   <main>
-
     <section class="services">
       <div class="container">
         <div class="services__header">
@@ -63,7 +62,6 @@
     </section>
 
     <?php include("component/faq-services.php"); ?>
-	
   </main>
 
 <?php include("footer.php"); ?>

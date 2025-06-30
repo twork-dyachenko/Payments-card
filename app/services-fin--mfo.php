@@ -30,7 +30,6 @@
                             <path d="M1 1L4 4L1 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
 						<span><span><a href="services-fin--mfo.php"><b><?= htmlspecialchars($lang['services_tab']['title']) ?></b></a></span></span>
-
                     </div>
                     <div class="services__select">
 						<div class="services-search__wrapper">

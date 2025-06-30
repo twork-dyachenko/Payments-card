@@ -9,14 +9,13 @@
 
 	include("header.php");
 ?>
-<title>Exchange ENG</title>
+<title>Services list</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 </head>
 
 <body>
     <main>
-
         <section class="services">
             <div class="container">
                 <div class="services__header">
@@ -26,7 +25,6 @@
                             <path d="M1 1L4 4L1 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         <span><span><a href="services-list.php"><b><?= htmlspecialchars($lang['services_tab']['other']) ?></b></a></span></span>
-
                     </div>
                     <div class="services__select">
 						<div class="services-search__wrapper">
@@ -115,7 +113,6 @@
         </section>
 
 		<?php include("component/faq-services.php"); ?>
-		
     </main>
 
 <?php include("footer.php"); ?>

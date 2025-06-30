@@ -222,7 +222,6 @@ function setupPaymentForm({
     
     
 
-    // 🔄 Принудительная проверка при загрузке (например, при автозаполнении браузером)
     inputs.forEach((input) => {
       const value = input.value.trim();
       if (value !== '') {

@@ -9,7 +9,7 @@
 
 	include("header.php");
 ?>
-<title>Services kcell ENG</title>
+<title>Services kcell</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <head>
