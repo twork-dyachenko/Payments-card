@@ -9,7 +9,7 @@
         <section class="payment-status payment-status--successful">
             <div class="payment-status__header">
                 <img src="assets/img/payment-done.png" alt="successful">
-                <div class="payment-status__title">**** 0100 картасына ақша аудару: сәтті.</div>
+                <div class="payment-status__title">**** 0100 шотына ақша аудару: сәтті.</div>
             </div>
             <div class="payment-status__body">
                 <div class="payment-status__body-item">
@@ -18,7 +18,7 @@
                         <span>**** 7622</span>
                     </div>
                     <div>
-                        <p>Картаға</p>
+                        <p>Есепке</p>
                         <span>**** 7438</span>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
         <section class="payment-status payment-status--error">
             <div class="payment-status__header">
                 <img src="assets/img/payment-error.png" alt="error">
-                <div class="payment-status__title">Картаға ақша <br> аудару **** 0100: қате. <br> Қайталап көріңіз.</div>
+                <div class="payment-status__title">Шотқа ақша аудару <br> **** 0100: қате. <br> Қайталап көріңіз.</div>
             </div>
             <div class="payment-status__footer">
                 <button class="payment-status__btn payment-status__btn--light">
@@ -67,7 +67,7 @@
         <section class="payment-status payment-status--pending">
             <div class="payment-status__header">
                 <img src="assets/img/payment-pending.png" alt="pending">
-                <div class="payment-status__title">**** 0100 картасына <br> ақша аудару: өңдеуде.</div>
+                <div class="payment-status__title">**** 0100 шотына ақша аудару: өңдеу.</div>
             </div>
             <div class="payment-status__footer">
                 <button class="payment-status__btn payment-status__btn--light">

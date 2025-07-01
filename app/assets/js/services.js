@@ -400,6 +400,7 @@ setupPaymentForm({
 
 const data = [
   { label: "Activ", url: "/services-activ.php" },
+  { label: "Beeline", url: "/services-beeline.php" },
   { label: "TELE2", url: "/services-tele2.php" },
   { label: "Zaimer", url: "/services-zaimer.php" },
   { label: "Koke", url: "/services-koke.php" },
@@ -432,22 +433,35 @@ function renderList(items) {
   list.style.display = "block";
 }
 
-input.addEventListener("input", function () {
-  const query = this.value.trim().toLowerCase();
-  const filtered = data.filter((item) =>
-    item.label.toLowerCase().includes(query)
-  );
-  renderList(filtered);
-});
-
-input.addEventListener("focus", function () {
-  if (!this.value.trim()) {
-    renderList(data);
+document.addEventListener("DOMContentLoaded", () => {
+  if (input) {
+    input.addEventListener("input", function () {
+      const query = this.value.trim().toLowerCase();
+      const filtered = data.filter((item) =>
+        item.label.toLowerCase().includes(query)
+      );
+      renderList(filtered);
+    });
   }
-});
-
-document.addEventListener("click", (e) => {
-  if (!e.target.closest(".services-search__wrapper")) {
-    list.style.display = "none";
+  
+  
+  if (input) {
+    input.addEventListener("focus", function () {
+      if (!this.value.trim()) {
+        renderList(data);
+      }
+    });
   }
+  
+  
+  const list = document.querySelector('.services-search__list'); // или нужный селектор
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".services-search__wrapper")) {
+      if (list) {
+        list.style.display = "none";
+      }
+    }
+  });
+
 });

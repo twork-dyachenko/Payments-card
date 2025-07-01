@@ -9,7 +9,7 @@
         <section class="payment-status payment-status--successful">
             <div class="payment-status__header">
                 <img src="assets/img/payment-done.png" alt="successful">
-                <div class="payment-status__title">Денежный перевод <br> на карту **** 0100: успех.</div>
+                <div class="payment-status__title">Денежный перевод <br> на аккаунт **** 0100: успех.</div>
             </div>
             <div class="payment-status__body">
                 <div class="payment-status__body-item">
@@ -18,7 +18,7 @@
                         <span>**** 7622</span>
                     </div>
                     <div>
-                        <p>На карту</p>
+                        <p>На аккаунт</p>
                         <span>**** 7438</span>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
         <section class="payment-status payment-status--error">
             <div class="payment-status__header">
                 <img src="assets/img/payment-error.png" alt="error">
-                <div class="payment-status__title">Денежный перевод <br> на карту **** 0100: ошибка. <br> Повторите попытку.</div>
+                <div class="payment-status__title">Денежный перевод <br> на аккаунт **** 0100: ошибка. <br> Повторите попытку.</div>
             </div>
             <div class="payment-status__footer">
                 <button class="payment-status__btn payment-status__btn--light">
@@ -67,7 +67,7 @@
         <section class="payment-status payment-status--pending">
             <div class="payment-status__header">
                 <img src="assets/img/payment-pending.png" alt="pending">
-                <div class="payment-status__title">Денежный перевод <br> на карту **** 0100: в обработке.</div>
+                <div class="payment-status__title">Денежный перевод <br> на аккаунт **** 0100: в обработке.</div>
             </div>
             <div class="payment-status__footer">
                 <button class="payment-status__btn payment-status__btn--light">

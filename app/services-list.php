@@ -88,13 +88,13 @@
                         </a>
                     </div>
                     <div class="services__item">
-                        <a href="services-steam.php">
+                        <a href="services-bookmakers.php">
                             <img src="assets/img/icon-olimpbet.png" alt="Icon Olimpbet">
                             <span>Olimpbet</span>
                         </a>
                     </div>
                     <div class="services__item">
-                        <a href="services-steam.php">
+                        <a href="services-bookmakers.php">
                             <img src="assets/img/icon-winline.png" alt="Icon Winline">
                             <span>Winline</span>
                         </a>

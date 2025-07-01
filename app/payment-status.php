@@ -9,7 +9,7 @@
         <section class="payment-status payment-status--successful">
             <div class="payment-status__header">
                 <img src="assets/img/payment-done.png" alt="successful">
-                <div class="payment-status__title">The transfer of funds <br> on the card **** 0100 was successful!</div>
+                <div class="payment-status__title">The transfer of funds <br> on the account **** 0100 was successful!</div>
             </div>
             <div class="payment-status__body">
                 <div class="payment-status__body-item">
@@ -18,7 +18,7 @@
                         <span>**** 7622</span>
                     </div>
                     <div>
-                        <p>To card</p>
+                        <p>To account</p>
                         <span>**** 7438</span>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
         <section class="payment-status payment-status--error">
             <div class="payment-status__header">
                 <img src="assets/img/payment-error.png" alt="error">
-                <div class="payment-status__title">The transfer of funds <br> on the card **** 0100 was successful!</div>
+                <div class="payment-status__title">The transfer of funds <br> on the account **** 0100 was successful!</div>
             </div>
             <div class="payment-status__footer">
                 <button class="payment-status__btn payment-status__btn--light">
@@ -67,7 +67,7 @@
         <section class="payment-status payment-status--pending">
             <div class="payment-status__header">
                 <img src="assets/img/payment-pending.png" alt="pending">
-                <div class="payment-status__title">The transfer of funds <br> on the card **** 0100 was successful!</div>
+                <div class="payment-status__title">The transfer of funds <br> on the account **** 0100 was successful!</div>
             </div>
             <div class="payment-status__footer">
                 <button class="payment-status__btn payment-status__btn--light">
